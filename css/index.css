@@ -1,0 +1,673 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+
+/* 搜索模块 */
+
+.search_index {
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    height: 50px;
+    background-color: white;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.search_index_box {
+    flex: 1;
+    height: 32px;
+    margin: 12px;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1.8px solid #0086f6;
+    font-size: 15px;
+    color: #999;
+    padding-top: 2px;
+    padding-left: 35px;
+}
+
+.search_index_box::before {
+    content: "\e986";
+    position: absolute;
+    left: 25px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+    font-family: icomoon;
+    color: grey;
+    font-size: 20px;
+}
+
+
+/* 导航模块 */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 6px 12px;
+    height: 184px;
+    background-color: white;
+}
+
+.nav ul {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.nav ul:nth-child(-n+4) {
+    border-right: 1px solid white;
+}
+
+.nav ul li {
+    height: 58px;
+}
+
+.nav .nav_01 li {
+    background-color: rgb(253, 245, 241);
+}
+
+.nav .nav_01 li:first-child {
+    border-top-left-radius: 8px;
+    background: linear-gradient(top, #E8655A, #EB8B5A);
+    background: -webkit-linear-gradient(top, #E8655A, #EB8B5A);
+}
+
+.nav .nav_01 li:last-child {
+    border-bottom-left-radius: 8px;
+}
+
+.nav .nav_02 li {
+    background-color: rgb(241, 249, 254);
+}
+
+.nav .nav_02 li:first-child {
+    background: linear-gradient(top, rgb(77, 133, 242), rgb(104, 175, 242));
+    background: -webkit-linear-gradient(top, rgb(77, 133, 242), rgb(104, 175, 242));
+}
+
+.nav .nav_03 li {
+    background-color: rgb(243, 245, 254);
+}
+
+.nav .nav_03 li:first-child {
+    background: linear-gradient(top, rgb(100, 131, 274), rgb(114, 163, 248));
+    background: -webkit-linear-gradient(top, rgb(100, 131, 274), rgb(114, 163, 248));
+}
+
+.nav .nav_04 li {
+    background-color: rgb(239, 251, 248);
+}
+
+.nav .nav_04 li:first-child {
+    background: linear-gradient(top, rgb(97, 192, 181), rgb(120, 212, 181));
+    background: -webkit-linear-gradient(top, rgb(97, 192, 181), rgb(120, 212, 181));
+}
+
+.nav .nav_05 li {
+    background-color: rgb(254, 249, 243);
+}
+
+.nav .nav_05 li:first-child {
+    background: linear-gradient(top, #F08F4A, #F3AA57);
+    background: -webkit-linear-gradient(top, #F08F4A, #F3AA57);
+    border-top-right-radius: 8px;
+}
+
+.nav .nav_05 li:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+.nav ul li:nth-child(-n+2) {
+    border-bottom: 1px solid white;
+}
+
+.nav ul li a {
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav ul li a span::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin-left: 50%;
+    margin-bottom: 4px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.nav .nav_01 span,
+.nav .nav_02 span,
+.nav .nav_03 span,
+.nav .nav_04 span,
+.nav .nav_05 span {
+    color: #333;
+}
+
+.nav .nav_01 li:first-child span,
+.nav .nav_02 li:first-child span,
+.nav .nav_03 li:first-child span,
+.nav .nav_04 li:first-child span,
+.nav .nav_05 li:first-child span {
+    color: white;
+}
+
+.nav .nav_01 li:nth-child(1) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -81px;
+    background-size: 28px auto;
+}
+
+.nav .nav_01 li:nth-child(2) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -334px;
+    background-size: 28px auto;
+}
+
+.nav .nav_01 li:nth-child(3) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px 2px;
+    background-size: 28px auto;
+}
+
+.nav .nav_02 li:nth-child(1) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -167px;
+    background-size: 28px auto;
+}
+
+.nav .nav_02 li:nth-child(2) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -54px;
+    background-size: 28px auto;
+}
+
+.nav .nav_02 li:nth-child(3) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -277px;
+    background-size: 28px auto;
+}
+
+.nav .nav_03 li:nth-child(1) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -363px;
+    background-size: 28px auto;
+}
+
+.nav .nav_03 li:nth-child(2) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -223px;
+    background-size: 28px auto;
+}
+
+.nav .nav_03 li:nth-child(3) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -251px;
+    background-size: 28px auto;
+}
+
+.nav .nav_04 li:nth-child(1) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -138px;
+    background-size: 28px auto;
+}
+
+.nav .nav_04 li:nth-child(2) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -194px;
+    background-size: 28px auto;
+}
+
+.nav .nav_04 li:nth-child(3) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -391px;
+    background-size: 28px auto;
+}
+
+.nav .nav_05 li:nth-child(1) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -26px;
+    background-size: 28px auto;
+}
+
+.nav .nav_05 li:nth-child(2) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -110px;
+    background-size: 28px auto;
+}
+
+.nav .nav_05 li:nth-child(3) a span::before {
+    background: url(../images/spirit.png)no-repeat 0px -306px;
+    background-size: 28px auto;
+}
+
+
+/* 转换模块 */
+
+.nav-switch-wrap {
+    height: 20px;
+    background: linear-gradient(top, white, transparent);
+    background: -webkit-linear-gradient(top, white, transparent);
+}
+
+
+/* 广告模块 */
+
+.sales ul {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+
+.sales ul li {
+    border-radius: 6px;
+    flex: 1;
+    background-color: #fff;
+}
+
+.sales ul li:first-child {
+    margin: 4px 4px 0 12px;
+    padding: 8px 8px;
+}
+
+.sales ul li:last-child {
+    margin: 4px 12px 0 4px;
+    padding: 8px 6px;
+}
+
+.sales .sales_hd_01 {
+    height: 20px;
+}
+
+.sales .sales_hd_01::before {
+    float: left;
+    content: "";
+    display: block;
+    width: 50%;
+    height: 20px;
+    background: url(../images/adv01.png) no-repeat;
+    background-size: auto 20px;
+}
+
+.sales .sales_hd_01::after {
+    float: right;
+    content: "特价好货直播中";
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 2px;
+    font-size: 10px;
+    background-color: #ffebe3;
+    color: #ff4607;
+    margin-top: 2px;
+    padding: 1px 4px;
+}
+
+.sales .sales_bd_01 {
+    border-radius: 5px;
+    position: relative;
+    margin-top: 6px;
+    height: 84px;
+    background: url(../upload/adv03.jpeg) no-repeat -10px -83px;
+    background-size: 260px auto;
+}
+
+.sales .sales_bd_01::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "酒店套餐";
+    background-color: #373533;
+    padding: 0 3px;
+    background: rgba(51, 51, 51, .8);
+    border-radius: 6px 0 6px 0;
+    font-size: 10px;
+    color: #fff;
+}
+
+.sales .sales_bd_01::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "湖州喜来登温泉度假酒店2晚";
+    padding: 3px 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sales .sales_bd_02 {
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    padding-top: 2px;
+}
+
+.sales .sales_bd_02 span:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #f60;
+    vertical-align: middle;
+}
+
+.sales .sales_bd_02 del {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 10px;
+    color: #666;
+}
+
+.sales .sales_bd_02 span:last-child {
+    margin-left: 2px;
+    padding: 2px;
+    background-image: linear-gradient( 90deg, #fa5956, #fb8650);
+    border-radius: 2px;
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #fff;
+    text-align: left;
+}
+
+.sales .sales_hd_03 {
+    height: 20px;
+}
+
+.sales .sales_hd_03::before {
+    float: left;
+    content: "";
+    display: block;
+    width: 50%;
+    height: 20px;
+    background: url(../images/adv02.png) no-repeat;
+    background-size: auto 20px;
+}
+
+.sales .sales_hd_03::after {
+    float: right;
+    content: "权威排行榜";
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 2px;
+    font-size: 10px;
+    background: #fdefd2;
+    color: #ae6e15;
+    margin-top: 2px;
+    padding: 1px 4px;
+}
+
+.sales_bd_04 {
+    display: flex;
+    margin-top: 6px;
+    height: 84px;
+}
+
+.sales .sales_bd_04 div {
+    flex: 1;
+    background-color: black;
+}
+
+.sales .sales_bd_04 div:first-child {
+    margin-right: 4px;
+    position: relative;
+    width: 100%;
+    background: url(../upload/adv01.jpeg) no-repeat -0px -19px;
+    background-size: 119px 134px;
+    border-radius: 6px;
+}
+
+.sales .sales_bd_04 div:first-child::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "华东";
+    padding: 0 3px;
+    background-image: linear-gradient(270deg, #f8e1bd, #e2c089);
+    border-radius: 6px 0 6px 0;
+    font-size: 10px;
+    color: #663c00;
+}
+
+.sales .sales_bd_04 div:first-child::after {
+    content: "华东奢华酒店榜";
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    font-family: PingFangSC-Semibold;
+    font-size: 11px;
+    color: #333;
+    line-height: 1.1;
+}
+
+.sales .sales_bd_04 div:last-child {
+    margin-right: 4px;
+    position: relative;
+    width: 100%;
+    background: url(../upload/adv02.jpeg) no-repeat -0px 1px;
+    background-size: 119px 85px;
+    border-radius: 6px;
+}
+
+.sales .sales_bd_04 div:last-child::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "华东";
+    padding: 0 3px;
+    background-image: linear-gradient(270deg, #f8e1bd, #e2c089);
+    border-radius: 6px 0 6px 0;
+    font-size: 10px;
+    color: #663c00;
+}
+
+.sales .sales_bd_04 div:last-child::after {
+    content: "华东滑雪景点榜";
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    font-family: PingFangSC-Semibold;
+    font-size: 11px;
+    color: #333;
+    line-height: 1.1;
+}
+
+
+/* 焦点图模块 */
+
+.focus a {
+    display: block;
+    margin: 10px 12px;
+    height: 129px;
+    border-radius: 6px;
+    background: url(../upload/adv04.jpeg);
+    background-size: auto 129px;
+}
+
+
+/* 帮助模块 */
+
+.help {
+    text-align: center;
+    display: flex;
+    margin: 24px 12px 0 12px;
+    height: 32px;
+}
+
+.help div {
+    position: relative;
+    flex: 1;
+}
+
+.help div a {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: block;
+    width: 102px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    color: #333;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.help div:nth-child(1) a::before {
+    display: inline-block;
+    content: "\e942";
+    font-family: icomoon;
+    vertical-align: middle;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+
+.help div:nth-child(2) a::before {
+    display: inline-block;
+    content: "\ea3e";
+    font-family: icomoon;
+    vertical-align: middle;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+
+.help div:nth-child(3) a::before {
+    display: inline-block;
+    content: "\e926";
+    font-family: icomoon;
+    vertical-align: middle;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+
+.help div:nth-child(3) a::after {
+    display: inline-block;
+    content: "\e91e";
+    font-family: icomoon;
+    vertical-align: middle;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+
+/* 版权模块 */
+
+.copyright {
+    margin: 13px 0 65px 0;
+    height: 43px;
+}
+
+.copyright div:first-child {
+    width: 100%;
+    display: flex;
+    margin: 0 0 13px 0;
+}
+
+.copyright div:first-child a {
+    padding-left: 20px;
+    text-align: left;
+    flex: 1;
+    color: #666;
+    font-size: 12px;
+}
+
+.copyright div:first-child a:first-child {
+    text-align: right;
+    border-right: 1px solid #666;
+    padding: 0 20px 0 0;
+}
+
+.copyright div:last-child {
+    text-align: center;
+    color: #666;
+    font-size: 10px;
+}
+
+
+/* 底部模块 */
+
+.footer {
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    height: 50px;
+    background-color: white;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.footer a {
+    position: relative;
+    flex: 1;
+}
+
+.footer a span {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    color: #666;
+    font-size: 11px;
+}
+
+.footer a span::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../images/spirit02.png)no-repeat 0 2px;
+    background-size: 32px auto;
+}
+
+.footer a:nth-child(2) span::before {
+    background: url(../images/spirit02.png)no-repeat 0 -29px;
+    background-size: 32px auto;
+}
+
+.footer a:nth-child(3) span::before {
+    background: url(../images/spirit02.png)no-repeat 0 -61px;
+    background-size: 32px auto;
+}
+
+.footer a:nth-child(4) span::before {
+    background: url(../images/spirit02.png)no-repeat 0 -92px;
+    background-size: 32px auto;
+}
